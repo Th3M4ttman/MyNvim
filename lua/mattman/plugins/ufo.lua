@@ -2,7 +2,7 @@ return {
   lazy = false,
   "kevinhwang91/nvim-ufo",
   event = "BufReadPost",  -- load when opening a file
-  dependencies = {
+    dependencies = {
     "kevinhwang91/promise-async", -- required for ufo
   },
   opts = function()

@@ -1,5 +1,8 @@
 
 return {
     { "<Leader>z", ":Z ",  desc = "zoxide-cd (fuzzy)" },
-    { "<Leader>Z", ":Z! ", desc = "zoxide-cd (force)" },
+    { "<Leader>Z", ":Telescope zoxide list<CR>", desc = "zoxide-cd (Telescope)" },
+
+
+    
 }
