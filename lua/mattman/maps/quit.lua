@@ -6,13 +6,13 @@ map({'n', 'i', "v"}, '<A-q>', "<cmd>q!<CR>", { desc = "Force Quit" })
 
 return {
 
-  { "<leader>q", group = "Quit" },
-  { "<leader>qq", "<cmd>q<cr>",   desc = "Quit" },
-  { "<leader>qf", "<cmd>q!<cr>",  desc = "Quit (force)" },
-  { "<leader>qs", "<cmd>wq<cr>",  desc = "Quit (save)" },
-  { "<leader>qb", group = "Buffer" },
-  { "<leader>qbb", "<cmd>bd<cr>",      desc = "Close buffer" },
-  { "<leader>qbs", "<cmd>w | bd<cr>",  desc = "Save & close buffer" },
-  { "<leader>qbf", "<cmd>bd!<cr>",     desc = "Force close buffer" },
+  { "<leader>Q", group = "Quit" },
+  { "<leader>Qq", "<cmd>q<cr>",   desc = "Quit" },
+  { "<leader>Qf", "<cmd>q!<cr>",  desc = "Quit (force)" },
+  { "<leader>Qs", "<cmd>wq<cr>",  desc = "Quit (save)" },
+  { "<leader>Qb", group = "Buffer" },
+  { "<leader>Qbb", "<cmd>bd<cr>",      desc = "Close buffer" },
+  { "<leader>Qbs", "<cmd>w | bd<cr>",  desc = "Save & close buffer" },
+  { "<leader>Qbf", "<cmd>bd!<cr>",     desc = "Force close buffer" },
 
 }

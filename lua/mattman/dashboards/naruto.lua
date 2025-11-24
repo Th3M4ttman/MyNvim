@@ -12,7 +12,8 @@ dashboard.section.buttons.val = {
     dashboard.button("t", "  Toggle Theme", ":CycleTheme<CR>"),
     dashboard.button("L", "󰒲  Lazy", ":Lazy<CR>"),
     dashboard.button("c", "  Open Config", ":Oil ~/.config/nvim<CR>"),
-    dashboard.button("z", "  Zoxide", ":Telescope zoxide list<CR>"), 
+    dashboard.button("z", "  Zoxide", ":Telescope zoxide list<CR>"),
+    dashboard.button("l", "  Last Session", ":AutosaveResume<CR>"),
     dashboard.button("q", "  Quit", ":q!<CR>"),
 }
 

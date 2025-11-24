@@ -1,0 +1,65 @@
+# Neovim Powerhouse TODO List
+
+This list compiles all the suggestions for turning your Neovim setup into a powerhouse IDE.
+
+### High-Impact / Core IDE Features
+
+- [ ] **Modernize Formatting/Linting:**
+  - [ ] Replace `efm-langserver` with `stevearc/conform.nvim` and `mfussenegger/nvim-lint`.
+
+- [ ] **Enhance Debugging:**
+  - [ ] Install `rcarriga/nvim-dap-ui` for a full visual debugging interface.
+  - [ ] Install `theHamsta/nvim-dap-virtual-text` to show variable values inline.
+
+- [ ] **Supercharge Telescope:**
+  - [ ] Install `nvim-telescope/telescope-fzf-native.nvim` for a major performance boost (requires build tools).
+  - [ ] Install `nvim-telescope/telescope-ui-select.nvim` to make all `vim.ui.select` menus use Telescope.
+  - [ ] Load the `gh` extension in your Telescope config to integrate with GitHub.
+
+- [ ] **Improve Completion:**
+  - [ ] Add `{ name = "cmdline" }` to your `nvim-cmp` sources to enable command-line autocompletion.
+
+- [ ] **Unified Diagnostics Panel:**
+  - [ ] Install `folke/trouble.nvim` for a unified panel to view diagnostics, LSP references, and more.
+
+### Advanced Editing & Workflows
+
+- [ ] **Advanced Text Objects:**
+  - [ ] Install `nvim-treesitter/nvim-treesitter-textobjects` to edit code based on its structure (functions, classes, etc.).
+
+- [ ] **Code Breadcrumbs:**
+  - [ ] Install `smiteshp/nvim-navic` and integrate it with `lualine` to show your current code context (e.g., class > function).
+
+- [ ] **Git Enhancements:**
+  - [ ] Install `f-person/git-blame.nvim` for inline, real-time blame information.
+  - [ ] Map keys to `gitsigns.nvim`'s built-in functions like `next_hunk`, `preview_hunk`, and `blame_line`.
+
+- [ ] **Task Management:**
+  - [ ] Install `folke/todo-comments.nvim` to highlight `TODO:`, `FIXME:`, etc., and get a project-wide list in Telescope.
+
+- [ ] **Deep Language Integration (Example for Rust):**
+  - [ ] Install `saecki/crates.nvim` to manage `Cargo.toml` dependencies from within Neovim.
+
+### UI/UX & Configuration Polish
+
+- [ ] **Add Icons:**
+  - [ ] Install a Nerd Font on your system.
+  - [ ] Install `nvim-tree/nvim-web-devicons` to add icons to `neo-tree`, `lualine`, `telescope`, etc.
+
+- [ ] **Unify File Navigation:**
+  - [ ] Choose a primary file explorer. For `oil.nvim`, set `vim.ui.open = require("oil").open` to make it the default.
+
+- [ ] **Simplify Keymap Guides:**
+  - [ ] Consider removing `cheatsheet.nvim` and using `which-key.nvim`'s on-demand mode (`:WhichKey`) for a consolidated setup.
+
+- [ ] **Improve Session Management:**
+  - [ ] Configure `persistence.nvim` to integrate with `alpha-nvim` for a "Resume Session" option on your dashboard.
+
+- [ ] **Enhance Folding:**
+  - [ ] Configure `ufo.nvim`'s `provider_selector` to prioritize `lsp` and `treesitter` for smarter code folding.
+
+- [ ] **Improve Notifications:**
+  - [ ] Install `rcarriga/nvim-notify` and configure `noice.nvim` to use it for a more robust notification system.
+
+- [ ] **Advanced Terminal Usage:**
+  - [ ] Explore `toggleterm.nvim`'s features for named, persistent terminals and sending code from buffers to a terminal.

@@ -2,7 +2,8 @@ local global = vim.g
 local o = vim.opt
 
 -- Editor options
-
+o.scrolloff = 20
+--o.virtualedit = "all"
 o.number = true -- Print the line number in front of each line
 o.relativenumber = true -- Show the line number relative to the line with the cursor in front of each line.
 o.clipboard = "unnamedplus" -- uses the clipboard register for all operations except yank.
