@@ -1,20 +1,9 @@
 -- SESSION COMMANDS  ---------------------------------------------------------
 -- Persistence
-vim.api.nvim_create_user_command("SessionLoad", function()
-	require("persistence").load()
-end, {})
 
-vim.api.nvim_create_user_command("SessionSelect", function()
-	require("persistence").select()
-end, {})
+	
+	
 
-vim.api.nvim_create_user_command("SessionLoadLast", function()
-	require("persistence").load({ last = true })
-end, {})
-
-vim.api.nvim_create_user_command("SessionStop", function()
-	require("persistence").stop()
-end, {})
 
 
 return {
@@ -26,10 +15,10 @@ return {
 	----------------------------------------------------------------------------
 	-- SESSION MANAGEMENT (Unified)
 	----------------------------------------------------------------------------
-	{ "<leader>qs", "<cmd>SessionLoad<cr>", desc = "Load session" },
-	{ "<leader>qS", "<cmd>SessionSelect<cr>", desc = "Select session" },
-	{ "<leader>ql", "<cmd>SessionLoadLast<cr>", desc = "Load last session" },
-	{ "<leader>qd", "<cmd>SessionStop<cr>", desc = "Stop persistence" },
+	{ "<leader>ql", ":lua require('persistence').load()<CR>",  desc = "Load session" },
+    
+	{ "<leader>qL", ":lua require('persistence').load({ last = true })<CR>", desc = "Load last session" },
+	{ "<leader>qd", ":lua require('persistence').stop()<CR>", desc = "Stop persistence" },
 
 	-- Bufstates submenu
 	{ "<leader>qb", group = "Bufstates" },

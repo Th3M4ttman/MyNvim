@@ -27,7 +27,11 @@ end
 -- Make it a Vim command
 vim.api.nvim_create_user_command("DapDebugArgs", debug_with_args, {})
 
-
+vim.keymap.set('n', '<leader>dw', function()
+  local var = vim.fn.expand('<cword>')  -- get word under cursor
+  require('dap').repl.eval(var, { context = 'watch' })
+  print("Watching:", var)
+end, { desc = "Add DAP watch (cursor word)" })
 
 
 return {
