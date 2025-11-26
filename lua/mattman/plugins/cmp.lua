@@ -24,6 +24,7 @@ local function setup_cmp()
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+        { name = "cmdline" },
       },
     })
 end
