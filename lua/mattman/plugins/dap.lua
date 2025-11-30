@@ -43,5 +43,32 @@ return {
 				stopOnEntry = false,
 			},
 		}
+
+		--------------------------------------------------------
+		-- Python: debugpy
+		---------------------------------------------------------
+		dap.adapters.python = {
+			type = "executable",
+			command = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/debugpy/venv/bin/python",
+			args = { "-m", "debugpy.adapter" },
+		}
+
+		dap.configurations.python = {
+			{
+				type = "python",
+				request = "launch",
+				name = "Launch file",
+				program = "${file}",
+				pythonPath = function()
+					local venv = os.getenv("VIRTUAL_ENV")
+					if venv then
+						return venv .. "/bin/python"
+					else
+						return os.getenv("HOME") .. "/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+					end
+				end,
+				console = "integratedTerminal", -- <--- important
+			},
+		}
 	end,
 }
