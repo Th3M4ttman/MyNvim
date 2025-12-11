@@ -5,6 +5,15 @@ vim.keymap.set("i", "<C-y>", 'copilot#Accept("<CR>")', {
     replace_keycodes = false,  
 })  
 
+
+vim.keymap.set("i", "<A-y>", 'copilot#Accept("<CR>")', {  
+    silent = true,  
+    expr = true,  
+    replace_keycodes = false,  
+})  
+
+
+
 local cop
 
 return {  

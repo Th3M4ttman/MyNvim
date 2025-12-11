@@ -1,9 +1,18 @@
--- in your plugins.lua (LazyVim style)
 return {
+    {
+        "tiagovla/scope.nvim",
+        config = function()
+            require("scope").setup()
+        end,
+    },
+
     {
         "akinsho/bufferline.nvim",
         version = "*",
-        dependencies = "nvim-web-devicons",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+            "tiagovla/scope.nvim",
+        },
         config = function()
             require("bufferline").setup({
                 options = {
@@ -14,8 +23,10 @@ return {
                     separator_style = "thin",
                     enforce_regular_tabs = true,
                     always_show_bufferline = true,
-                }
+
+                    extensions = { "scope" },
+                },
             })
         end,
-    }
+    },
 }

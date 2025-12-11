@@ -26,3 +26,21 @@ o.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smag
 o.splitright = true
 o.splitbelow = true -- When on, splitting a window will put the new window below the current one
 o.termguicolors = true
+
+local no_italic = function()
+  -- get all highlight groups
+  local groups = vim.api.nvim_get_hl(0, {})
+
+  for name, opts in pairs(groups) do
+    if opts.italic then
+      opts.italic = false
+      vim.api.nvim_set_hl(0, name, opts)
+    end
+  end
+end
+
+-- run on start AND after colorscheme change
+no_italic()
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = no_italic,
+})
